@@ -107,7 +107,7 @@ class ShowcaseController extends Controller
             }
             $showcase->save();
 
-            return redirect()->route('showcase.index', ['id' =>  $id]);
+            return redirect()->route('showcase.index', ['id' =>  $showcase->users_id]);
     }
 
     /**
