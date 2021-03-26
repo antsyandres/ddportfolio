@@ -1,16 +1,27 @@
 @extends('layouts.app')
 @section('content')
-
 <div class="container">
-    <div class="row justify-content-start">
+    <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card shadow p-3 mb-5 bg-white rounded">
+                <!-- <div class="card-header">{{ __('Dashboard') }}</div> -->
 
-               <div class="card-body"> 
-               <div class="container">
+                <div class="card-body">
                 <div style="background:transparent !important" class="jumbotron">
-                <h1 class="display-4">M.A.G Members</h1>
-                </div>
+                <div class="container">
+  <div class="row align-items-center">
+    <div class="col-md-8">
+    <h1 class="display-4">M.A.G Members</h1>
+                <h4 class="display-6"><i>(Marc, Anthony, Gabriel)</i></h4>
+    </div>
+    <div class="col-md-4">
+    <img width="350px" height="250px" class="img-fluid" src="{{ asset('img/mag.png') }}"></img>
+    </div>
+
+  </div>
+</div>
+                <hr>
+                </br></br></br></br>
 
                 @foreach($users as $user)
                 <h1 class="display-6"><b> {{$user->last_name}}, {{$user->first_name}} {{$user->mi}}</b></h1>

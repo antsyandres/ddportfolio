@@ -8,8 +8,20 @@
 
                 <div class="card-body">
                 <div style="background:transparent !important" class="jumbotron">
-                <h1 class="display-4">Showcase</h1>
+                <div class="container">
+  <div class="row align-items-center">
+    <div class="col-md-8">
+    <h1 class="display-4">Project Showcase</h1>
+                <h4 class="display-6">Summative Activities</h4>
+    </div>
+    <div class="col-md-4">
+    <img width="350px" height="250px" class="img-fluid" src="{{ asset('img/skylinepigeonfly.gif') }}"></img>
+    </div>
+
+  </div>
 </div>
+                <hr>
+                </br></br></br></br>
 @foreach($users as $user)
 <section id="{{ $user->id }}"></section>
 <h1 class="display-6"><b>{{$user->first_name}} {{$user->last_name}}</b></h1>
