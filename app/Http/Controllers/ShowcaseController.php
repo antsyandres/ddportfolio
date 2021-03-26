@@ -102,6 +102,12 @@ class ShowcaseController extends Controller
         $showcase->activity_description = $request->input('activity_description');
 
             if ($request->hasFile('file_name')) {
+
+                $path = public_path()."/video/".$showcase->file_name;
+                if(file_exists($path) !== 0 ){
+                @unlink($path);
+                }
+
                 $showcase->file_name = $fileName = time().'.'.request()->file_name->getClientOriginalExtension();
                 request()->file_name->move(public_path('video'), $fileName);
             }

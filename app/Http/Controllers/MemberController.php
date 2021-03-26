@@ -51,16 +51,45 @@ class MemberController extends Controller
         $users = User::find($id);
         $users->first_name = $request->input('first_name');
         $users->last_name = $request->input('last_name');
-        $users->mi = $request->input('mi');
         $users->email = $request->input('email');
-        $users->image_file = $request->input('image_file');
-        $users->course = $request->input('course');
-        $users->background = $request->input('background');
 
-            if ($request->hasFile('image_file')) {
-                $users->image_file = $fileName = time().'.'.request()->image_file->getClientOriginalExtension();
-                request()->image_file->move(public_path('img'), $fileName);
+        if($request->filled('mi') )
+        {
+            $users->mi = $request->input('mi');
+        }
+
+        // if($request->filled('image_file') )
+        // {
+        //     $users->image_file = $request->input('image_file');
+
+
+        // }
+
+        if($request->filled('course') )
+        {
+            $users->course = $request->input('course');
+        }
+
+        if($request->filled('background') )
+        {
+            $users->background = $request->input('background');
+        }
+
+        if ($request->hasFile('image_file')) {
+
+            if($users->image_file === "default.png"){
+
+            }else{
+                $path = public_path()."/img/".$users->image_file;
+                if(file_exists($path) !== 0 ){
+                @unlink($path);
+                }
             }
+
+            $users->image_file = $fileName = time().'.'.request()->image_file->getClientOriginalExtension();
+            request()->image_file->move(public_path('img'), $fileName);
+        }
+
             $users->save();
 
             return redirect()->route('dashboard', ['id' =>  $id]);

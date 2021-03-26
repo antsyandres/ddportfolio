@@ -107,37 +107,37 @@ class DashboardController extends Controller
     public function destroy(Request $request, $id)
     {
         $users = User::find($id);
+
+        $imgpath = public_path()."/img/".$users->image_file;
+
+        if($users->image_file === "default.png"){
+
+        }else{
+
+        if(file_exists($imgpath) !== 0 ){
+        @unlink($imgpath);
+        }
+
+        }
+
+        foreach($users->showcases as $usershows){
+
+        $vidpath = public_path()."/video/".$usershows->file_name;
+        if(file_exists($vidpath) !== 0 ){
+        @unlink($vidpath);
+        }
+        }
+
+        // foreach($showcases as $showcase){
+        // $vidpath = public_path()."/video/".$showcase->file_name;
+        // if(file_exists($vidpath) !== 0 ){
+        // @unlink($vidpath);
+        // }
+        // }
+
         $users->delete();
     
         return redirect()->route('dashboard');
     }
-
-    //     /**
-    //  * Remove the specified resource from storage.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function destroyShowcase(Request $request, $id)
-    // {
-    //     $users = Showcase::find($id);
-
-    //     $path = public_path()."/video/".$users->file_name;
-    //     if(file_exists($path) !== 0 ){
-    //     @unlink($path);
-    //     }
-
-    //     $users->delete();
-
-    //     $showcases = Showcase::where('users_id', $users->users_id )->orderBy('id','asc')->get();
-
-    //     // echo "<pre>"; 
-    //     // echo json_encode(json_decode($showcases), JSON_PRETTY_PRINT); 
-    //     // echo "</pre>";
-
-    //     return view('showcase')->with('showcases', $showcases)->with('user_id', $users->users_id );
-
-    // }
-
-
+    
 }
