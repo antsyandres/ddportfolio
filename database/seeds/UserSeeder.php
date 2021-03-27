@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
             'mi' => 'B.',
             'email' => 'mdecastro@admin.com',
             'password' => Hash::make('adminadmin'),
-            'image_file' => 'default.png',
+            'image_file' => 'marc_pic.jpg',
             'course' => 'BSITSMBA',
             'background' => 'Hi! My name is Marc Ferdinand B. De Castro, I\'m from Philippines, currently residing in Victoria, Laguna. I\'m studying at FEU Institute of Technology with the course of Information Technology specialized in Service Management and Business Analytics. Welcome to our website i hope you like our simple portfolio website.',
         ]);
