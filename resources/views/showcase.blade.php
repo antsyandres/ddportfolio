@@ -24,7 +24,7 @@
                 </br></br></br></br>
 @foreach($users as $user)
 <section id="{{ $user->id }}"></section>
-<h1 class="display-6"><b>{{$user->first_name}} {{$user->last_name}}</b></h1>
+<h1 class="display-5"><b>{{$user->first_name}} {{$user->last_name}}</b></h1>
 </BR></BR>
 @foreach($user->showcases as $showcase)
 

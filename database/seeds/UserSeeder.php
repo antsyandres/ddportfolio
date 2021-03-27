@@ -28,7 +28,7 @@ class UserSeeder extends Seeder
             'mi' => 'S.',
             'email' => 'aserrano@admin.com',
             'password' => Hash::make('adminadmin'),
-            'image_file' => 'default.png',
+            'image_file' => 'antsy_pic.jpg',
             'course' => 'BSITWMA',
             'background' => 'Hello, you can call my antsy and thank you for visiting! I was born and rasied in Daly City, San Francisco, California. I\'m currently residing in the Philippines studying at Far Eastern University Institute Of Technology. I am a forth year student taking up Information Technology, Specialization in Web and Mobile Applications. I aspire to be a web developer once i graduate. Please take a look at my groups portfolio and thank you once again for visiting! Xiexie Zaijian!',
         ]);
@@ -39,7 +39,7 @@ class UserSeeder extends Seeder
             'mi' => 'E.',
             'email' => 'gzamora@admin.com',
             'password' => Hash::make('adminadmin'),
-            'image_file' => 'default.png',
+            'image_file' => 'gab_pic.jpg',
             'course' => 'BSITAGD',
             'background' => 'My name is Gabriel E. Zamora. I am 23 years old.I currently live in Meycauayan,Bulacan in the Philippines. I am a student of FEU Institute of Technology, where I am taking up BSIT with specialization in Animation and Game Development. I am aiming to be a flexible game developer one day.',
         ]);

@@ -34,7 +34,7 @@
       <td>{{$user->email}}</td>
       <td><a href="{{route('showcase.index', $user->id)}}"><button type="button" style="width: 100px" class="btn btn-outline-success float-left create">Add</button></a></td>
       <td><a href="{{route('member.edit', $user->id)}}"><button type="button" style="width: 100px" class="btn btn-outline-primary float-left create">Edit</button></a></td>
-      <td><a href="{{route('dashboard.destroy', $user->id)}}"><button type="button" style="width: 100px" class="btn btn-outline-danger float-left delete">Delete</button></a></td>
+      <td><a href="{{route('dashboard.destroy', $user->id)}}"><button type="button" style="width: 100px" class="btn btn-outline-danger float-left delete" @php if($user->id === 4 || $user->id === 14 || $user->id === 24){echo "disabled"; }@endphp>Delete</button></a></td>
 
     </tr>
     @endforeach
