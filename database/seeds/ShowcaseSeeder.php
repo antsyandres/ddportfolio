@@ -77,7 +77,7 @@ class ShowcaseSeeder extends Seeder
         ]);
         DB::table('showcases')->insert([
             'users_id' => '14',
-            'file_name' => "1616673305.mkv",
+            'file_name' => "1616673305.mp4",
             'activity_name' => "[M1-TECHNICAL] MODULE 2",
             'activity_title' => "Interactive Button",
             'activity_description' => "Using Simple Buttons in Animate",
@@ -91,35 +91,35 @@ class ShowcaseSeeder extends Seeder
         ]);
         DB::table('showcases')->insert([
             'users_id' => '14',
-            'file_name' => "1616673367.mkv",
+            'file_name' => "1616673367.mp4",
             'activity_name' => "[M1-TECHNICAL] MODULE 4",
             'activity_title' => "SOUNDS",
             'activity_description' => "Creating animation with sounds",
         ]);
         DB::table('showcases')->insert([
             'users_id' => '14',
-            'file_name' => "1616673408.mkv",
+            'file_name' => "1616673408.mp4",
             'activity_name' => "[M1-TECHNICAL] MODULE 5",
             'activity_title' => "ACTION SCRIPT",
             'activity_description' => "Controlling object using AS3",
         ]);
         DB::table('showcases')->insert([
             'users_id' => '14',
-            'file_name' => "1616673431.mkv",
+            'file_name' => "1616673431.mp4",
             'activity_name' => "[M1-TECHNICAL] MODULE 6",
             'activity_title' => "THUMBNAIL",
             'activity_description' => "Creating the Thumbnail and the Image Templates",
         ]);
         DB::table('showcases')->insert([
             'users_id' => '14',
-            'file_name' => "1616673455.mkv",
+            'file_name' => "1616673455.mp4",
             'activity_name' => "[M1-TECHNICAL] MODULE 7-10",
             'activity_title' => "Page Loader 1",
             'activity_description' => "Creating a loader using UIloader",
         ]);
         DB::table('showcases')->insert([
             'users_id' => '14',
-            'file_name' => "1616673469.mkv",
+            'file_name' => "1616673469.mp4",
             'activity_name' => "[M1-TECHNICAL] MODULE 7-10",
             'activity_title' => "Page Loader 2",
             'activity_description' => "Creating a loader using UIloader Second Part",
